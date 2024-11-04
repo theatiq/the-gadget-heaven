@@ -18,8 +18,15 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="w-10/12 h-[300px] mx-auto border border-white rounded-lg -translate-y-20">
-        <img className="w-full h-full object-cover p-3" src={heroImg} alt="Hero Image"/>
+      <div className="w-10/12 h-[400px] mx-auto border border-white rounded-lg -translate-y-20 overflow-hidden">
+        <img
+          className="w-full h-full object-center p-3"
+          src={heroImg}
+          alt="Hero Image"
+        />
+      </div>
+      <div>
+        <h1 className="text-4xl text-center font-bold">Explore Cutting-Edge Gadgets</h1>
       </div>
     </div>
   );

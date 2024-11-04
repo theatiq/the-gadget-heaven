@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { MdOutlineShoppingCart, FiHeart } from "react-icons/md";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { FaRegHeart } from "react-icons/fa";
 const Navbar = () => {
   return (
     <div>
@@ -66,7 +67,7 @@ const Navbar = () => {
             <MdOutlineShoppingCart />
           </Link>
           <Link>
-            <FiHeart />
+            <FaRegHeart />
           </Link>
         </div>
       </div>

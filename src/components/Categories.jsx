@@ -1,9 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const Categories = () => {
+const Categories = ({ categories }) => {
   return (
-    <div>
-      <h1 className="text-6xl text-center">All Categories</h1>
+    <div className="flex flex-col justify-between mt-20">
+      {categories.map((category) => (
+        <NavLink to={`./category/${category.category}`}>
+          {category.category}
+        </NavLink>
+      ))}
     </div>
   );
 };
