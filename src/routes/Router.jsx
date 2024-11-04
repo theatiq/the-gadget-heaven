@@ -14,31 +14,32 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("../../public/category.json"),
+        loader: () => fetch("../category.json"),
         children: [
           {
             path: "/",
             element: <GadgetCards></GadgetCards>,
-            loader: () => fetch("../../public/gadgets.json"),
+            loader: () => fetch("../gadgets.json"),
           },
           {
             path: "/category/:category",
             element: <GadgetCards></GadgetCards>,
-            loader: () => fetch("../../public/gadgets.json"),
+            loader: () => fetch("../gadgets.json"),
           },
         ],
       },
+
       {
-        path: "/statistics",
+        path: "statistics",
         element: <Statistics></Statistics>,
         //   loader: () => fetch("../../public/coffees.json"),
       },
       {
-        path: "/dashboard",
+        path: "dashboard",
         element: <Dashboard></Dashboard>,
       },
       {
-        path: "/preOrder",
+        path: "preOrder",
         element: <PreOrder></PreOrder>,
       },
       //   {

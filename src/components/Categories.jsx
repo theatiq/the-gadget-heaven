@@ -7,8 +7,8 @@ const Categories = ({ categories }) => {
       <NavLink to={"/"}>
         <button className="btn bg-purple-300 rounded-2xl">All Products</button>
       </NavLink>
-      {categories.map((category) => (
-        <NavLink to={`./category/${category.category}`}>
+      {categories.map((category, index) => (
+        <NavLink key={index} to={`/category/${category.category}`}>
           <button className="btn bg-purple-300 rounded-2xl">
             {category.category}
           </button>

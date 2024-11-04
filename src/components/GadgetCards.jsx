@@ -20,8 +20,8 @@ const GadgetCards = () => {
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-12">
-        {gadgets.map((gadget) => (
-          <GadgetCard gadget={gadget}></GadgetCard>
+        {gadgets.map((gadget, index) => (
+          <GadgetCard key={index} gadget={gadget}></GadgetCard>
         ))}
       </div>
       {/* <button className="btn btn-warning" onClick={() => navigate("/coffees")}>
