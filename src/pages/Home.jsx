@@ -8,8 +8,14 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <Categories categories={categories}></Categories>
-      <Outlet></Outlet>
+      <div className="flex">
+        <div className="w-1/4">
+          <Categories categories={categories}></Categories>
+        </div>
+        <div className="w-3/4">
+          <Outlet></Outlet>
+        </div>
+      </div>
     </div>
   );
 };
