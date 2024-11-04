@@ -1,12 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayouts from "../layouts/MainLayouts";
+import Home from "../pages/Home";
+import GadgetCards from "../components/GadgetCards";
 import Statistics from "../pages/Statistics";
 import Dashboard from "../pages/Dashboard";
 import PreOrder from "../pages/PreOrder";
-import Home from "../pages/Home";
-import GadgetCards from "../components/GadgetCards";
+import AllGadgets from "../components/AllGadgets";
 
-const router = createBrowserRouter([
+const routes = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts></MainLayouts>,
@@ -26,13 +27,16 @@ const router = createBrowserRouter([
             element: <GadgetCards></GadgetCards>,
             loader: () => fetch("../gadgets.json"),
           },
+          {
+            path: "allGadgets",
+            element: <AllGadgets></AllGadgets>,
+            loader: () => fetch("../gadgets.json"),
+          },
         ],
       },
-
       {
         path: "statistics",
         element: <Statistics></Statistics>,
-        //   loader: () => fetch("../../public/coffees.json"),
       },
       {
         path: "dashboard",
@@ -42,13 +46,8 @@ const router = createBrowserRouter([
         path: "preOrder",
         element: <PreOrder></PreOrder>,
       },
-      //   {
-      //     path: "/coffee/:id",
-      //     element: <CoffeeDetails></CoffeeDetails>,
-      //     loader: () => fetch("../../public/coffees.json"),
-      //   },
     ],
   },
 ]);
 
-export { router };
+export { routes };
