@@ -14,17 +14,17 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-          loader: () => fetch("../../public/category.json"),
+        loader: () => fetch("../../public/category.json"),
         children: [
           {
             path: "/",
             element: <GadgetCards></GadgetCards>,
-            // loader: () => fetch("../../public/coffees.json"),
+            loader: () => fetch("../../public/gadgets.json"),
           },
           {
             path: "/category/:category",
             element: <GadgetCards></GadgetCards>,
-            // loader: () => fetch("../../public/coffees.json"),
+            loader: () => fetch("../../public/gadgets.json"),
           },
         ],
       },
