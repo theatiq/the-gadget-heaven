@@ -13,12 +13,12 @@ const GadgetCard = ({ gadget }) => {
     rating,
   } = gadget;
   return (
-    <div className="card bg-base-100 w-96 shadow-xl">
-      <figure className="px-10 pt-10">
-        <img src={product_image} alt="Shoes" className="rounded-xl" />
+    <div className="card bg-base-200 border rounded-lg ">
+      <figure className="px-2 pt-2">
+        <img src={product_image} alt="Shoes" className="rounded-xl h-[300px] w-full" />
       </figure>
-      <div className="card-body items-center text-center">
-        <h2 className="card-title">{description}</h2>
+      <div className="card-body items-start text-center">
+        <h2 className="card-title text-start">{description}</h2>
         <p>Price: ${price}</p>
         <div className="card-actions">
           <button className="btn btn-primary">View Details</button>
