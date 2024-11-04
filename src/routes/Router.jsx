@@ -6,6 +6,7 @@ import Statistics from "../pages/Statistics";
 import Dashboard from "../pages/Dashboard";
 import PreOrder from "../pages/PreOrder";
 import AllGadgets from "../components/AllGadgets";
+import GadgetDetails from "../pages/GadgetDetails";
 
 const routes = createBrowserRouter([
   {
@@ -45,6 +46,12 @@ const routes = createBrowserRouter([
       {
         path: "preOrder",
         element: <PreOrder></PreOrder>,
+      },
+      {
+        path: "/gadget/:id",
+        element: <GadgetDetails></GadgetDetails>,
+        loader: () => fetch("../gadgets.json"),
+
       },
     ],
   },
