@@ -43,8 +43,8 @@ const GadgetDetails = () => {
         </p>
       </div>
       <div className="hero bg-base-200 w-10/12 h-[500px] mx-auto border border-white rounded-lg -translate-y-60 overflow-hidden ">
-        <div className="hero-content flex-col lg:flex-row">
-          <img src={product_image} className="max-w-sm rounded-lg shadow-2xl" />
+        <div className="hero-content flex justify-end">
+          <img src={product_image} className="max-w-sm rounded-lg h-[400px] w-full shadow-2xl" />
           <div className="flex flex-col gap-1 justify-between">
             <h1 className="text-2xl font-bold">{product_title}</h1>
             <p className="py-6">Price: ${price}</p>
