@@ -3,7 +3,7 @@ import { useLoaderData, useParams, useSearchParams } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { addCarts } from "../utils/uutility";
+import { addCarts, addWishes } from "../utils/uutility";
 
 const GadgetDetails = () => {
   const data = useLoaderData();
@@ -36,6 +36,11 @@ const GadgetDetails = () => {
 
   const handleAddCart = (gadget) => {
     addCarts(gadget);
+    setIsAdd(true);
+  };
+
+  const handleWishList = (gadget) => {
+    addWishes(gadget);
     setIsAdd(true);
   };
 
@@ -112,9 +117,11 @@ const GadgetDetails = () => {
             {/* <Link>
               <MdOutlineShoppingCart />
             </Link> */}
-            <Link>
-              <FaRegHeart />
-            </Link>
+            <button onClick={() => handleWishList(gadget)}>
+              <Link>
+                <FaRegHeart />
+              </Link>
+            </button>
           </div>
         </div>
       </div>

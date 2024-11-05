@@ -4,7 +4,6 @@ import Cart from "../pages/Cart";
 
 const Carts = () => {
   const [gadgets, setGadgets] = useState([]);
-  const [cost, setCost] = useState(0);
   useEffect(() => {
     const carts = getAllCarts();
     setGadgets(carts);

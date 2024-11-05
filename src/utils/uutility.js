@@ -11,8 +11,6 @@ const getAllCarts = () => {
     }
 }
 
-
-
 const addCarts = (gadget) => {
     const carts = getAllCarts()
     const isExist = carts.find(item => item.product_id === gadget.product_id)
@@ -22,7 +20,6 @@ const addCarts = (gadget) => {
     alert("Successfully added ")
 }
 
-
 const removeCart = (id) => {
     const carts = getAllCarts()
     const remaining = carts.filter(gadget => gadget.product_id != id)
@@ -30,6 +27,38 @@ const removeCart = (id) => {
     alert("Successfully Removed")
 }
 
+// Wishlists
+
+const getAllWishes = () => {
+    const all = localStorage.getItem("wish")
+
+    if (all) {
+        const wish = JSON.parse(all)
+        return wish
+    } else {
+        return []
+    }
+}
+
+const addWishes = (gadget) => {
+    const wish = getAllWishes()
+    const isExist = wish.find(item => item.product_id === gadget.product_id)
+    if (isExist) { return alert("Gadget Already exists") }
+    wish.push(gadget)
+    localStorage.setItem('wish', JSON.stringify(wish))
+    alert("Successfully added ")
+}
+
+const removeWish = (id) => {
+    const wish = getAllWishes()
+    const remaining = wish.filter(gadget => gadget.product_id != id)
+    localStorage.setItem("wish", JSON.stringify(remaining))
+    alert("Successfully Removed")
+}
+
+
+
+
 
 // export { getAllFavorites, addFavorite, removeFavorite }
-export { getAllCarts, addCarts, removeCart }
+export { getAllCarts, addCarts, removeCart, removeWish, addWishes, getAllWishes }
