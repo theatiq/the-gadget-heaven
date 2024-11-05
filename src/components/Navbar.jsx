@@ -2,7 +2,11 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
+import { getAllWishes, getAllCarts } from "../utils/uutility";
 const Navbar = () => {
+  const carts = getAllCarts();
+  const wishlist = getAllWishes();
+  console.log(carts);
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -65,9 +69,11 @@ const Navbar = () => {
         <div className="navbar-end">
           <Link>
             <MdOutlineShoppingCart />
+            <span>{carts.length}</span>
           </Link>
           <Link>
             <FaRegHeart />
+            <span>{wishlist.length}</span>
           </Link>
         </div>
       </div>
