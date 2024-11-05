@@ -1,9 +1,30 @@
 import React from "react";
-
+import { NavLink } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 const Dashboard = () => {
   return (
     <div>
-      <h1 className="text-6xl text-center">This Dashboard</h1>
+      <div className="bg-purple-600 min-h-[250px] pt-10">
+        <h1 className="text-4xl text-center text-white font-bold mb-3">
+          Dashboard
+        </h1>
+        <p className="text-xl text-center text-white w-8/12 mx-auto">
+          Explore the latest gadgets that will take your experience to the next
+          level. From smart devices to the coolest accessories, we have it all!
+        </p>
+        <div className="flex justify-center gap-5 mt-5">
+          <NavLink to={"cart"}>
+            <button className="btn w-[120px] rounded-3xl">Cart</button>
+          </NavLink>
+          <NavLink to={"wishlist"}>
+            <button className="btn w-[120px] rounded-3xl">Wishlist</button>
+          </NavLink>
+        </div>
+      </div>
+      
+      <div>
+        <Outlet></Outlet>
+      </div>
     </div>
   );
 };

@@ -7,6 +7,8 @@ import Dashboard from "../pages/Dashboard";
 import PreOrder from "../pages/PreOrder";
 import AllGadgets from "../components/AllGadgets";
 import GadgetDetails from "../pages/GadgetDetails";
+import Cart from "../pages/Cart"
+import Wishlist from "../pages/Wishlist"
 
 const routes = createBrowserRouter([
   {
@@ -42,6 +44,16 @@ const routes = createBrowserRouter([
       {
         path: "dashboard",
         element: <Dashboard></Dashboard>,
+        children:[
+          {
+            path:"cart",
+            element: <Cart></Cart>
+          },
+          {
+            path: "wishlist",
+            element: <Wishlist></Wishlist>
+          }
+        ]
       },
       {
         path: "preOrder",

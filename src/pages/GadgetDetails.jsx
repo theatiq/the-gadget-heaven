@@ -3,11 +3,14 @@ import { useLoaderData, useParams, useSearchParams } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { addCarts } from "../utils/uutility";
 
 const GadgetDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
   const [gadget, setGadget] = useState({});
+  // const [carts, setCarts] = useState([]);
+  const [isAdd, setIsAdd] = useState(false);
 
   useEffect(() => {
     const singleData = data.find((gadget) => gadget.product_id == id);
@@ -31,6 +34,11 @@ const GadgetDetails = () => {
     rating,
   } = gadget;
 
+  const handleAddCart = (gadget) => {
+    addCarts(gadget)
+    setIsAdd(true)
+  }
+ 
   return (
     <div>
       <div className="bg-purple-600 min-h-[400px] pt-10">
@@ -44,7 +52,10 @@ const GadgetDetails = () => {
       </div>
       <div className="hero bg-base-200 w-10/12 h-[500px] mx-auto border border-white rounded-lg -translate-y-60 overflow-hidden ">
         <div className="hero-content flex justify-end">
-          <img src={product_image} className="max-w-sm rounded-lg h-[400px] w-full shadow-2xl" />
+          <img
+            src={product_image}
+            className="max-w-sm rounded-lg h-[400px] w-full shadow-2xl"
+          />
           <div className="flex flex-col gap-1 justify-between">
             <h1 className="text-2xl font-bold">{product_title}</h1>
             <p className="py-6">Price: ${price}</p>
@@ -92,7 +103,10 @@ const GadgetDetails = () => {
                 className="mask mask-star-2 bg-orange-400"
               />
             </div>
-            <button className="btn btn-primary">
+            <button
+              onClick={() => handleAddCart(gadget)}
+              className="btn btn-primary"
+            >
               Add to Cart <MdOutlineShoppingCart />
             </button>
             {/* <Link>
