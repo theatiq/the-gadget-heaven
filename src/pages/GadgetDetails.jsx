@@ -35,10 +35,10 @@ const GadgetDetails = () => {
   } = gadget;
 
   const handleAddCart = (gadget) => {
-    addCarts(gadget)
-    setIsAdd(true)
-  }
- 
+    addCarts(gadget);
+    setIsAdd(true);
+  };
+
   return (
     <div>
       <div className="bg-purple-600 min-h-[400px] pt-10">

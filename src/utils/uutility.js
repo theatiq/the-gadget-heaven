@@ -23,13 +23,13 @@ const addCarts = (gadget) => {
 }
 
 
-// const removeFavorite = (id) => {
-//     const favorites = getAllFavorites()
-//     const remaining = favorites.filter(coffee => coffee.id != id)
-//     localStorage.setItem("favorites", JSON.stringify(remaining))
-//     toast.success("Successfully Removed")
-// }
+const removeCart = (id) => {
+    const carts = getAllCarts()
+    const remaining = carts.filter(gadget => gadget.product_id != id)
+    localStorage.setItem("carts", JSON.stringify(remaining))
+    alert("Successfully Removed")
+}
 
 
 // export { getAllFavorites, addFavorite, removeFavorite }
-export { getAllCarts, addCarts }
+export { getAllCarts, addCarts, removeCart }

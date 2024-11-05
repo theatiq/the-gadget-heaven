@@ -7,7 +7,7 @@ import Dashboard from "../pages/Dashboard";
 import PreOrder from "../pages/PreOrder";
 import AllGadgets from "../components/AllGadgets";
 import GadgetDetails from "../pages/GadgetDetails";
-import Cart from "../pages/Cart"
+import Cart from "../pages/Carts"
 import Wishlist from "../pages/Wishlist"
 
 const routes = createBrowserRouter([
