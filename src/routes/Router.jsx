@@ -9,6 +9,7 @@ import AllGadgets from "../components/AllGadgets";
 import GadgetDetails from "../pages/GadgetDetails";
 import Cart from "../pages/Carts";
 import Wishlist from "../pages/Wishlist";
+import ErrorPage from "../pages/ErrorPage";
 
 const routes = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const routes = createBrowserRouter([
         path: "/gadget/:id",
         element: <GadgetDetails></GadgetDetails>,
         loader: () => fetch("../gadgets.json"),
+      },
+      {
+        path: "*",
+        element: <ErrorPage></ErrorPage>
       },
     ],
   },

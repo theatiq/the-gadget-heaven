@@ -29,6 +29,7 @@ const Carts = () => {
     const sortedCart = [...gadgets].sort((a, b) => b.price - a.price);
     setGadgets(sortedCart);
   };
+  console.log("Cart List: ", gadgets.length)
 
   return (
     <div>
@@ -44,7 +45,7 @@ const Carts = () => {
           <h3 className="text-3xl font-bold">Payment Successful</h3>
           <p className="text-xl">Thanks for Purchasing</p>
           <p className="text-xl">
-            Total:{" "}
+            Total:${" "}
             {gadgets.reduce((a, b) => {
               return a + b.price;
             }, 0)}{" "}
@@ -60,7 +61,7 @@ const Carts = () => {
         <h1 className="text-xl font-bold">Cart</h1>
         <div className="flex justify-between items-center gap-5">
           <p className="text-xl font-bold">
-            Total Cost:{" "}
+            Total Cost:${" "}
             {gadgets.reduce((a, b) => {
               return a + b.price;
             }, 0)}{" "}

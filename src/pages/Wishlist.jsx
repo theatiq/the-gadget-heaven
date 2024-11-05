@@ -14,7 +14,7 @@ const Wishlist = () => {
     const wish = getAllWishes();
     setGadgets(wish);
   };
-
+console.log("Wishlist: ", gadgets.length)
   return (
     <div>
       <div className="flex justify-between my-5">
