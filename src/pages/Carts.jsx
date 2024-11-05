@@ -15,6 +15,11 @@ const Carts = () => {
     setGadgets(carts);
   };
 
+  const handleSort = () => {
+    const sortedCart = [...gadgets].sort((a, b) => b.price - a.price);
+    setGadgets(sortedCart);
+  };
+
   return (
     <div>
       <div className="flex justify-between my-5">
@@ -26,7 +31,10 @@ const Carts = () => {
               return a + b.price;
             }, 0)}{" "}
           </p>
-          <button className="btn border border-purple-600 rounded-3xl w-[150px]">
+          <button
+            onClick={handleSort}
+            className="btn border border-purple-600 rounded-3xl w-[150px]"
+          >
             Sort by Price
           </button>
           <button className="btn border bg-purple-500 text-white rounded-3xl w-[120px]">
