@@ -10,7 +10,7 @@ const MainLayouts = () => {
     <div>
       <DynamicTitle></DynamicTitle>
       {/* toaster */}
-      <div className="h-12">
+      <div className="h-5">
         {/* Navbar */}
         <Navbar></Navbar>
       </div>

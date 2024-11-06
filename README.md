@@ -27,3 +27,5 @@
     c. You can experience a smooth Single Page functionality.
     d. You can get sorted by price list
     e. You have also a wishlist.
+6. Requirement Document Link:
+    https://github.com/ProgrammingHero1/B10-A8-gadget-heaven

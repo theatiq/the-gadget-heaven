@@ -1,13 +1,20 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { getAllWishes, getAllCarts } from "../utils/uutility";
 const Navbar = () => {
   const carts = getAllCarts();
   const wishlist = getAllWishes();
+  const location = useLocation();
+
+
   return (
-    <div className="navbar fixed top-0 bg-purple-600 z-50 opacity-80 px-10">
+    <div
+      className={`navbar fixed top-0 z-50 opacity-80 px-10 ${
+        location.pathname === "/" ? "bg-purple-600" : ""
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -67,12 +74,16 @@ const Navbar = () => {
       <div className="navbar-end">
         <div className="flex gap-3">
           <div className="relative">
-            <MdOutlineShoppingCart className="text-white"/>
-            <span className="absolute -top-5 -right-1 text-white">{carts.length}</span>
+            <MdOutlineShoppingCart className="text-white" />
+            <span className="absolute -top-5 -right-1 text-white">
+              {carts.length}
+            </span>
           </div>
           <div className="relative">
-            <FaRegHeart className="text-white"/>
-            <span className="absolute -top-5 -right-1 text-white">{wishlist.length}</span>
+            <FaRegHeart className="text-white" />
+            <span className="absolute -top-5 -right-1 text-white">
+              {wishlist.length}
+            </span>
           </div>
         </div>
       </div>
