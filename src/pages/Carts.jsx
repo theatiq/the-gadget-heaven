@@ -9,17 +9,20 @@ import { useNavigate } from "react-router-dom";
 
 Modal.setAppElement("#root");
 
-const navigate = useNavigate();
-
 const Carts = () => {
+  const navigate = useNavigate();
   const [gadgets, setGadgets] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleHome = () => {
+    navigate("/");
+  };
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => {
     setIsOpen(false);
     handlePurchase();
-    navigate("/");
+    handleHome();
   };
 
   useEffect(() => {
