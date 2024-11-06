@@ -4,6 +4,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { addCarts, addWishes } from "../utils/uutility";
+import RatingComponents from "../components/RatingComponents";
 
 const GadgetDetails = () => {
   const data = useLoaderData();
@@ -80,7 +81,8 @@ const GadgetDetails = () => {
                 ))}
             </ul>
             <p>Rating ⬛</p>
-            <div className="rating">
+            {<RatingComponents rating={rating}></RatingComponents>}
+            {/* <div className="rating">
               <input
                 type="radio"
                 name="rating-2"
@@ -107,7 +109,7 @@ const GadgetDetails = () => {
                 name="rating-2"
                 className="mask mask-star-2 bg-orange-400"
               />
-            </div>
+            </div> */}
             <button
               onClick={() => handleAddCart(gadget)}
               className="btn btn-primary"
