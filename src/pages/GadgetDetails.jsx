@@ -110,20 +110,20 @@ const GadgetDetails = () => {
                 className="mask mask-star-2 bg-orange-400"
               />
             </div> */}
-            <button
-              onClick={() => handleAddCart(gadget)}
-              className="btn btn-primary"
-            >
-              Add to Cart <MdOutlineShoppingCart />
-            </button>
-            {/* <Link>
-              <MdOutlineShoppingCart />
-            </Link> */}
-            <button onClick={() => handleWishList(gadget)}>
-              <Link>
-                <FaRegHeart />
-              </Link>
-            </button>
+            <div className="flex items-center gap-5">
+              <button
+                onClick={() => handleAddCart(gadget)}
+                className="btn bg-purple-600 rounded-2xl text-white"
+              >
+                Add to Cart <MdOutlineShoppingCart />
+              </button>
+
+              <button onClick={() => handleWishList(gadget)}>
+                <Link>
+                  <FaRegHeart />
+                </Link>
+              </button>
+            </div>
           </div>
         </div>
       </div>

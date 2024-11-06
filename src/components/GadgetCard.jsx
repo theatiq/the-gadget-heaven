@@ -27,7 +27,7 @@ const GadgetCard = ({ gadget }) => {
         <p>Price: ${price}</p>
         <div className="card-actions">
           <Link to={`/gadget/${product_id}`}>
-            <button className="btn btn-primary">View Details</button>
+            <button className="btn border-purple-600 rounded-3xl">View Details</button>
           </Link>
         </div>
       </div>

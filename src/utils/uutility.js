@@ -1,5 +1,7 @@
 // import { toast } from "react-toastify"
 
+import toast from "react-hot-toast"
+
 const getAllCarts = () => {
     const all = localStorage.getItem("carts")
 
@@ -14,17 +16,17 @@ const getAllCarts = () => {
 const addCarts = (gadget) => {
     const carts = getAllCarts()
     const isExist = carts.find(item => item.product_id === gadget.product_id)
-    if (isExist) { return alert("Gadget Already exists") }
+    if (isExist) { return toast.error("Gadget Already exists") }
     carts.push(gadget)
     localStorage.setItem('carts', JSON.stringify(carts))
-    alert("Successfully added ")
+    toast.success("Successfully added")
 }
 
 const removeCart = (id) => {
     const carts = getAllCarts()
     const remaining = carts.filter(gadget => gadget.product_id != id)
     localStorage.setItem("carts", JSON.stringify(remaining))
-    alert("Successfully Removed")
+    toast.success("Successfully Removed")
 }
 
 // Wishlists
@@ -43,21 +45,18 @@ const getAllWishes = () => {
 const addWishes = (gadget) => {
     const wish = getAllWishes()
     const isExist = wish.find(item => item.product_id === gadget.product_id)
-    if (isExist) { return alert("Gadget Already exists") }
+    if (isExist) { return toast.error("Gadget Already exists") }
     wish.push(gadget)
     localStorage.setItem('wish', JSON.stringify(wish))
-    alert("Successfully added ")
+    toast.success("Successfully added ")
 }
 
 const removeWish = (id) => {
     const wish = getAllWishes()
     const remaining = wish.filter(gadget => gadget.product_id != id)
     localStorage.setItem("wish", JSON.stringify(remaining))
-    alert("Successfully Removed")
+    toast.success("Successfully Removed")
 }
-
-
-
 
 
 // export { getAllFavorites, addFavorite, removeFavorite }

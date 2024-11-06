@@ -3,9 +3,11 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { routes } from "./routes/Router";
+import { Toaster } from 'react-hot-toast';
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Toaster />
     <RouterProvider router={routes} />
   </StrictMode>
 );

@@ -4,6 +4,7 @@ import Cart from "../pages/Cart";
 import Modal from "react-modal";
 import payment from "../assets/Group.png";
 import "../index.css";
+import { FaSortNumericDownAlt } from "react-icons/fa";
 
 Modal.setAppElement("#root");
 
@@ -70,7 +71,7 @@ const Carts = () => {
             onClick={handleSort}
             className="btn border border-purple-600 rounded-3xl w-[150px]"
           >
-            Sort by Price
+            Sort by Price <FaSortNumericDownAlt />
           </button>
           <button
             onClick={openModal}
