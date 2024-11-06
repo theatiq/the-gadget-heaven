@@ -82,7 +82,7 @@ const GadgetDetails = () => {
             </ul>
             <p className="font-bold">Rating</p>
             {<RatingComponents rating={rating}></RatingComponents>}
-
+            
             <div className="flex items-center gap-5">
               <button
                 onClick={() => handleAddCart(gadget)}

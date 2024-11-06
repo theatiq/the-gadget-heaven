@@ -7,8 +7,6 @@ const Navbar = () => {
   const carts = getAllCarts();
   const wishlist = getAllWishes();
   const location = useLocation();
-  
-
 
   return (
     <div
@@ -52,7 +50,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to={"/"} className="btn btn-ghost text-2xl text-white font-bold">
+        <Link to={"/"} className="btn btn-ghost text-2xl font-bold">
           Gadget Heaven
         </Link>
       </div>
@@ -76,15 +74,11 @@ const Navbar = () => {
         <div className="flex gap-3">
           <div className="relative">
             <MdOutlineShoppingCart className="" />
-            <span className="absolute -top-5 -right-1">
-              {carts.length}
-            </span>
+            <span className="absolute -top-5 -right-1">{carts.length}</span>
           </div>
           <div className="relative">
             <FaRegHeart className="" />
-            <span className="absolute -top-5 -right-1 ">
-              {wishlist.length}
-            </span>
+            <span className="absolute -top-5 -right-1 ">{wishlist.length}</span>
           </div>
         </div>
       </div>

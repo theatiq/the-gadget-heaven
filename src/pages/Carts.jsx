@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { getAllCarts, removeCart } from "../utils/uutility";
 import Cart from "../pages/Cart";
 import Modal from "react-modal";
@@ -6,6 +6,8 @@ import payment from "../assets/Group.png";
 import "../index.css";
 import { FaSortNumericDownAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+export const CartContext = createContext(0);
 
 Modal.setAppElement("#root");
 
@@ -48,6 +50,9 @@ const Carts = () => {
 
   return (
     <div>
+      <CartContext.Provider value={gadgets.length}>
+        <Navbar></Navbar>
+      </CartContext.Provider>
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
