@@ -5,20 +5,31 @@ import Modal from "react-modal";
 import payment from "../assets/Group.png";
 import "../index.css";
 import { FaSortNumericDownAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 Modal.setAppElement("#root");
+
+const navigate = useNavigate();
 
 const Carts = () => {
   const [gadgets, setGadgets] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
+  const closeModal = () => {
+    setIsOpen(false);
+    handlePurchase();
+    navigate("/");
+  };
 
   useEffect(() => {
     const carts = getAllCarts();
     setGadgets(carts);
   }, []);
+
+  const handlePurchase = () => {
+    setGadgets([]);
+  };
 
   const handleRemove = (id) => {
     removeCart(id);
@@ -30,7 +41,7 @@ const Carts = () => {
     const sortedCart = [...gadgets].sort((a, b) => b.price - a.price);
     setGadgets(sortedCart);
   };
-  console.log("Cart List: ", gadgets.length)
+  console.log("Cart List: ", gadgets.length);
 
   return (
     <div>
