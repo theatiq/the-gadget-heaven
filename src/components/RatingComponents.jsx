@@ -5,14 +5,14 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa"; // You can cu
 const RatingComponents = ({ rating }) => {
   return (
     <div>
-      <h3>Rating Component</h3>
+      
+      <div>{rating}</div>
       <Rating
         initialRating={rating}
         emptySymbol={<FaRegStar />}
         fullSymbol={<FaStar />}
         fractions={2}
       />
-      <div>Your rating: {rating}</div>
     </div>
   );
 };

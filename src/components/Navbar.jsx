@@ -7,6 +7,7 @@ const Navbar = () => {
   const carts = getAllCarts();
   const wishlist = getAllWishes();
   const location = useLocation();
+  
 
 
   return (
@@ -74,14 +75,14 @@ const Navbar = () => {
       <div className="navbar-end">
         <div className="flex gap-3">
           <div className="relative">
-            <MdOutlineShoppingCart className="text-white" />
-            <span className="absolute -top-5 -right-1 text-white">
+            <MdOutlineShoppingCart className="" />
+            <span className="absolute -top-5 -right-1">
               {carts.length}
             </span>
           </div>
           <div className="relative">
-            <FaRegHeart className="text-white" />
-            <span className="absolute -top-5 -right-1 text-white">
+            <FaRegHeart className="" />
+            <span className="absolute -top-5 -right-1 ">
               {wishlist.length}
             </span>
           </div>

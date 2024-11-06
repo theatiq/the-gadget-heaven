@@ -3,7 +3,7 @@ import heroImg from "../assets/banner.jpg";
 const Banner = () => {
   return (
     <div className="">
-      <div className="hero bg-purple-600 min-h-[400px] rounded-lg">
+      <div className="hero bg-purple-600 min-h-[400px]">
         <div className="hero-content text-center">
           <div className="">
             <h1 className="text-5xl font-bold text-white">

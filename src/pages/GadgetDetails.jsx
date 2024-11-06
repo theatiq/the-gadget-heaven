@@ -80,36 +80,9 @@ const GadgetDetails = () => {
                   </li>
                 ))}
             </ul>
-            <p>Rating ⬛</p>
+            <p className="font-bold">Rating</p>
             {<RatingComponents rating={rating}></RatingComponents>}
-            {/* <div className="rating">
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-                defaultChecked
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
-            </div> */}
+
             <div className="flex items-center gap-5">
               <button
                 onClick={() => handleAddCart(gadget)}
