@@ -1,8 +1,29 @@
-# React + Vite
+1. My Project:
+    Name        : "Gadget Heaven" hosted at Surge.
+    Live Link   : "opposite-crow.surge.sh"
+    Github Repo : "https://github.com/programming-hero-web-course2/b10a8-gadget-heaven-theatiq"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. A brief description:
+    This is Gadget Purchasing Platform. You will get all latest gadgets here. You can also pre-order here.
+3. List of React Fundamental concepts used in the project:
+    a. React Router
+    b. Virtual DOM
+    c. Browser Router
+    d. Different Hook
+    e. State Manage
 
-Currently, two official plugins are available:
+4. Technologies used:
+    This is a modern Single Page Application. We have used cutting-edge technologies here. Some of those are as follows:
+    a. JavaScript
+    b. React with Vite
+    c. Tailwind CSS
+    d. DaisyUI
+    e. React Router
+    f. Use Local Storage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+5. 5 key features of your project:
+    a. You can Pre Order here.
+    b. You can get variety of latest products.
+    c. You can experience a smooth Single Page functionality.
+    d. You can get sorted by price list
+    e. You have also a wishlist.

@@ -3,10 +3,12 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import DynamicTitle from "../components/Dynamic";
 
 const MainLayouts = () => {
   return (
     <div>
+      <DynamicTitle></DynamicTitle>
       {/* toaster */}
       <div className="h-16">
         {/* Navbar */}

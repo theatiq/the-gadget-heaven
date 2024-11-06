@@ -8,6 +8,7 @@ const ErrorPage = () => {
   };
   return (
     <div>
+      <h1 className="text-6xl text-center font-bold text-purple-600">404</h1>
       <h1 className="text-6xl text-center font-bold text-purple-600">
         Data Not found
       </h1>
