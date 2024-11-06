@@ -13,15 +13,25 @@ const Dashboard = () => {
           level. From smart devices to the coolest accessories, we have it all!
         </p>
         <div className="flex justify-center gap-5 mt-5">
-          <NavLink to={"cart"}>
-            <button className="btn w-[120px] rounded-3xl">Cart</button>
+          <NavLink
+            className={({ isActive }) =>
+              `btn w-[120px] rounded-3xl ${isActive ? "bg-purple-600" : ""}`
+            }
+            to={"cart"}
+          >
+            Cart
           </NavLink>
-          <NavLink to={"wishlist"}>
-            <button className="btn w-[120px] rounded-3xl">Wishlist</button>
+          <NavLink
+            className={({ isActive }) =>
+              `btn w-[120px] rounded-3xl ${isActive ? "bg-purple-600" : ""}`
+            }
+            to={"wishlist"}
+          >
+            Wishlist
           </NavLink>
         </div>
       </div>
-      
+
       <div>
         <Outlet></Outlet>
       </div>

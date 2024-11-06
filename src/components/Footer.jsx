@@ -4,12 +4,9 @@ const Footer = () => {
   return (
     <div>
       <footer className="footer bg-purple-600 text-white border-base-300 border-t px-10 py-4">
-        <div className="text-center pl-96">
-          <p className="text-xl font-bold">
-            Gadget Heaven
-            <br />
-            Leading the way in cutting-edge technology and innovation.
-          </p>
+        <div className="flex flex-col items-center pl-96">
+          <p className="text-xl font-bold">Gadget Heaven</p>
+          <p>Leading the way in cutting-edge technology and innovation.</p>
         </div>
       </footer>
       <footer className="footer bg-purple-600 text-white pl-24 pb-5">
