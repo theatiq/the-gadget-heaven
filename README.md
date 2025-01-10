@@ -1,7 +1,7 @@
 1. My Project:
     Name        : "Gadget Heaven" hosted at Surge.
     Live Link   : "opposite-crow.surge.sh"
-    Github Repo : "https://github.com/programming-hero-web-course2/b10a8-gadget-heaven-theatiq"
+    Github Repo : "<https://github.com/theatiq/the-gadget-heaven>"
 
 2. A brief description:
     This is Gadget Purchasing Platform. You will get all latest gadgets here. You can also pre-order here.
@@ -28,4 +28,4 @@
     d. You can get sorted by price list
     e. You have also a wishlist.
 6. Requirement Document Link:
-    https://github.com/ProgrammingHero1/B10-A8-gadget-heaven
+    <https://github.com/ProgrammingHero1/B10-A8-gadget-heaven>
